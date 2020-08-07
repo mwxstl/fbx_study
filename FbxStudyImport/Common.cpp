@@ -60,16 +60,16 @@ bool loadScene(FbxManager* pManager, FbxScene* pScene, const char* pFilePath)
 
 		if (importer->GetStatus().GetCode() == FbxStatus::eInvalidFileVersion)
 		{
-			FBXSDK_printf("fbx file format version for this fbx sdk is %d.%d.%d", sdkMajor, sdkMinor, sdkRevision);
-			FBXSDK_printf("fbx file format version for file '%s' is %d.%d.%d", pFilePath, fileMajor, fileMinor, fileRevision);
+			FBXSDK_printf("fbx file format version for this fbx sdk is %d.%d.%d\n", sdkMajor, sdkMinor, sdkRevision);
+			FBXSDK_printf("fbx file format version for file '%s' is %d.%d.%d\n\n", pFilePath, fileMajor, fileMinor, fileRevision);
 		}
 		return false;
 	}
-	FBXSDK_printf("fbx file format version for this fbx sdk is %d.%d.%d", sdkMajor, sdkMinor, sdkRevision);
+	FBXSDK_printf("fbx file format version for this fbx sdk is %d.%d.%d\n", sdkMajor, sdkMinor, sdkRevision);
 
 	if (importer->IsFBX())
 	{
-		FBXSDK_printf("fbx file format version for file '%s' is %d.%d.%d", pFilePath, fileMajor, fileMinor, fileRevision);
+		FBXSDK_printf("fbx file format version for file '%s' is %d.%d.%d\n\n", pFilePath, fileMajor, fileMinor, fileRevision);
 
 		FBXSDK_printf("animation stack information\n");
 
